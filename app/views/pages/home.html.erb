@@ -1,0 +1,60 @@
+<div id="main">
+
+  <div id="hero" class="d-flex flex-column justify-content-center align-items-center text-center text-white">
+
+  <div class="hero-content">
+    <%= image_tag 'bewerbungs_pic.jpeg', alt: 'Marko Baboci Profile', class: 'rounded-circle profile-pic' %>
+    <h1 class="mt-4">Hello, I'm <span class="text-primary">Marko Baboci</span>.</h1>
+    <h3>Ruby on Rails Developer.</h3>
+    <a href="#portfolio" class="btn btn-outline-primary mt-4">View My Work</a>
+  </div>
+</div>
+
+
+
+
+  <div id="about" class="container py-5 text-center">
+    <h2 class="mb-4">About Me</h2>
+    <hr class="divider mx-auto">
+    <div class="row text-center mt-5">
+      <%= render partial: 'shared/card', locals: { image_path: 'about/coding.jpg', title: 'Back-end', description: 'My main focus. I love algorithm & software design. RESTful & secure back-end with authorizations and database validations.' } %>
+      <%= render partial: 'shared/card', locals: { image_path: 'about/design.jpg', title: 'Front-end', description: 'Responsive & animated layouts with performance optimization.' } %>
+      <%= render partial: 'shared/card', locals: { image_path: 'about/rules.jpg', title: 'Best Practice', description: 'I prioritize security and clean code by adhering to style guides, naming conventions, and design principles.' } %>
+      <%= render partial: 'shared/card', locals: { image_path: 'about/team.jpg', title: 'Team Buddy', description: 'GitHub workflows with feature branches, pull requests, and code reviews. MVP and Agile practices. Driven by collaboration to fuel innovation.' } %>
+      <%= render partial: 'shared/card', locals: { image_path: 'about/climbing.jpg', title: 'Learning & Sharing', description: 'My purposes at heart. I am deeply passionate about continuous learning and eager to explore new technologies and disciplines.' } %>
+      <%= render partial: 'shared/card', locals: { image_path: 'about/multi.jpg', title: 'Interdisciplinary Background', description: 'Strong communication skills and a business mindset, backed by passion and experience in social work, real estate, and sustainable financial markets.' } %>
+    </div>
+  </div>
+
+  <div id="portfolio">
+    <h2>Portfolio</h2>
+      <ul>1 project</ul>
+      <ul>1 project</ul>
+      <ul>1 project</ul>
+
+  </div>
+
+  <div id="blog">
+    <h2>Blog</h2>
+    <ul>1 post</ul>
+    <ul>1 post</ul>
+    <ul>1 post</ul>
+    <ul>1 post</ul>
+  </div>
+
+  <div id="aboutme">
+    <h2>About Me</h2>
+    <p>I'm passionate about building software solutions...</p>
+  </div>
+
+  <div id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out through the form below:</p>
+    <%= simple_form_for :message, url: contact_path do |f| %>
+      <%= f.input :name %>
+      <%= f.input :email %>
+      <%= f.input :content, as: :text %>
+      <%= f.button :submit, "Send" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,117 @@
+.navbar {
+  font-family: Arial, sans-serif;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffdd57; /* Change to a bright accent color on hover */
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+#hero {
+  background: url('background.jpg') no-repeat center top;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  margin-top: -300px;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 300;
+}
+
+.btn-outline-primary {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid white ;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: green;
+  border: solid white;
+  color: white;
+}
+
+#about {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#4F7B28;
+  }
+
+  .divider {
+    width: 50px;
+    height: 4px;
+    background-color: #4F7B28;
+  }
+
+  .row {
+    margin-top: 20px;
+  }
+
+  i {
+    transition: transform 0.3s ease;
+  }
+
+  i:hover {
+    transform: scale(1.1);
+  }
+
+  h4 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #6c757d;
+  }
+}
+.card-image {
+  width: 80px; /* Adjust width as needed */
+  height: 80px;
+  object-fit: contain; /* Ensures the image doesn't get distorted */
+  margin-bottom: 15px;
+}
