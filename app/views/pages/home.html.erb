@@ -1,60 +1,126 @@
-<div id="main">
 
-  <div id="hero" class="d-flex flex-column justify-content-center align-items-center text-center text-white">
+  <div id="main">
 
-  <div class="hero-content">
-    <%= image_tag 'bewerbungs_pic.jpeg', alt: 'Marko Baboci Profile', class: 'rounded-circle profile-pic' %>
-    <h1 class="mt-4">Hello, I'm <span class="text-primary">Marko Baboci</span>.</h1>
-    <h3>Ruby on Rails Developer.</h3>
-    <a href="#portfolio" class="btn btn-outline-primary mt-4">View My Work</a>
-  </div>
-</div>
+    <div id="hero" class="d-flex flex-column align-items-center text-center text-white">
+
+      <div id="hero-picture">
+        <%= image_tag 'smile-blackandwhite.jpeg', alt: 'Marko Baboci Profile', class: 'rounded-circle profile-pic fade-effect' %>
+      </div>
+
+      <div class="hero-content">
+        <h2 class="mb-4">Marko Baboci</h2>
+        <div
+          id="typewriter"
+          data-controller="typewriter"
+          data-typewriter-texts-value='["Berlin based Full Stack Web Developer"]'>
+        </div>
 
 
 
+        <div><a href="#project-section" class="btn-custom mt-4">View My Work</a></div>
 
-  <div id="about" class="container py-5 text-center">
-    <h2 class="mb-4">About Me</h2>
-    <hr class="divider mx-auto">
-    <div class="row text-center mt-5">
-      <%= render partial: 'shared/card', locals: { image_path: 'about/coding.jpg', title: 'Back-end', description: 'My main focus. I love algorithm & software design. RESTful & secure back-end with authorizations and database validations.' } %>
-      <%= render partial: 'shared/card', locals: { image_path: 'about/design.jpg', title: 'Front-end', description: 'Responsive & animated layouts with performance optimization.' } %>
-      <%= render partial: 'shared/card', locals: { image_path: 'about/rules.jpg', title: 'Best Practice', description: 'I prioritize security and clean code by adhering to style guides, naming conventions, and design principles.' } %>
-      <%= render partial: 'shared/card', locals: { image_path: 'about/team.jpg', title: 'Team Buddy', description: 'GitHub workflows with feature branches, pull requests, and code reviews. MVP and Agile practices. Driven by collaboration to fuel innovation.' } %>
-      <%= render partial: 'shared/card', locals: { image_path: 'about/climbing.jpg', title: 'Learning & Sharing', description: 'My purposes at heart. I am deeply passionate about continuous learning and eager to explore new technologies and disciplines.' } %>
-      <%= render partial: 'shared/card', locals: { image_path: 'about/multi.jpg', title: 'Interdisciplinary Background', description: 'Strong communication skills and a business mindset, backed by passion and experience in social work, real estate, and sustainable financial markets.' } %>
+      </div>
+
+        <div class="rolling-titles">
+          <h2>JavaScript | Python | Ruby on Rails | Vue.JS | Django | React | SCSS/SASS | CSS | HTML | PostgreSQL | C | Tailwind CSS | Bootstrap | Git | GitHub | Heroku | Cloudinary | Figma | Canva</h2>
+        </div>
+
     </div>
+
+
+
+  <div id="about-projects">
+      <div id="about" class="container py-5 text-center">
+        <h2 class="mb-4">About Me</h2>
+        <hr class="divider mx-auto">
+        <div class="row text-center mt-5">
+          <%= render partial: 'shared/card', locals: { image_path: 'about/beckendlogo.jpg', title: 'Back-end', description: 'My main focus. I love algorithm & software design. RESTful & secure back-end with authorizations and database validations.' } %>
+          <%= render partial: 'shared/card', locals: { image_path: 'about/design.jpg', title: 'Front-end', description: 'Responsive & animated layouts with performance optimization.' } %>
+          <%= render partial: 'shared/card', locals: { image_path: 'about/conform.jpg', title: 'Best Practice', description: 'I prioritize security and clean code by adhering to style guides, naming conventions, and design principles.' } %>
+          <%= render partial: 'shared/card', locals: { image_path: 'about/team.jpg', title: 'Team Buddy', description: 'GitHub workflows with feature branches, pull requests, and code reviews. MVP and Agile practices. Driven by collaboration to fuel innovation.' } %>
+          <%= render partial: 'shared/card', locals: { image_path: 'about/climbing.jpg', title: 'Learning & Sharing', description: 'My purposes at heart. I am deeply passionate about continuous learning and eager to explore new technologies and disciplines.' } %>
+          <%= render partial: 'shared/card', locals: { image_path: 'about/interdisciplinary.jpg', title: 'Interdisciplinary Background', description: 'Strong communication skills and a business mindset, backed by passion and experience in social work, real estate, and sustainable financial markets.' } %>
+        </div>
+      </div>r
+
+
+  <div id="project-section" class="d-flex flex-column justify-content-center align-items-center text-center text-white py-5">
+
+    <div id="projects" class="container py-5 my-5 text-center">
+      <h2>My Projects</h2>
+        <hr class="divider mx-auto">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <!-- Project 1 -->
+      <div class="col">
+        <div class="card project-card">
+          <img src="<%= asset_path('projects/banner-background.png') %>" class="card-img-top" alt="MediVet">
+          <div class="card-body">
+            <h5 class="card-title">MediVet</h5>
+            <p class="card-text">A full-stack application for scheduling appointments between users, pets, and veterinarians, inspired by Doctolib.</p>
+            <a href="https://www.medivetcare.online" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col">
+        <div class="card project-card">
+          <img src="<%= asset_path('projects/logo-SA.png') %>" class="card-img-top" alt="Soziale Beratungsstellen">
+          <div class="card-body">
+            <h5 class="card-title">Soziale Beratungsstellen</h5>
+            <p class="card-text">A platform connecting users with social counseling centers, offering categorized search and detailed information for accessible support.</p>
+            <a href="https://beratungsstellen-7c1d0e442b86.herokuapp.com" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col">
+        <div class="card project-card">
+          <img src="<%= asset_path('projects/Little_Capitalist_Logo_Cropped.png') %>" class="card-img-top" alt="Little Capitalist">
+          <div class="card-body">
+            <h5 class="card-title">Little Capitalist</h5>
+            <p class="card-text">A Python-based backend application that utilizes various financial APIs to estimate the user's real-time net worth.</p>
+            <a href="https://example.com/tic_tac_toe_ruby" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col">
+        <div class="card project-card">
+          <img src="<%= asset_path('projects/logo-duck.jpg') %>" class="card-img-top" alt="AirDuck">
+          <div class="card-body">
+            <h5 class="card-title">AirDuck</h5>
+            <p class="card-text">A platform that enables users to rent or exchange Rubberducks all over the world.</p>
+            <a href="https://airduck-7f6b4f1c5684.herokuapp.com/rubberducks" target="_blank" class="btn btn-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <div id="portfolio">
-    <h2>Portfolio</h2>
-      <ul>1 project</ul>
-      <ul>1 project</ul>
-      <ul>1 project</ul>
-
+  </div>
   </div>
 
-  <div id="blog">
-    <h2>Blog</h2>
-    <ul>1 post</ul>
-    <ul>1 post</ul>
-    <ul>1 post</ul>
-    <ul>1 post</ul>
-  </div>
+    <div id=contact-text><h1>Contact</h1></div>
 
-  <div id="aboutme">
-    <h2>About Me</h2>
-    <p>I'm passionate about building software solutions...</p>
-  </div>
+    <div id="contact" class="bg-light py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6 p-4 shadow rounded bg-white">
+            <%= simple_form_for :message, url: contact_path, method: :post do |f| %>
+              <%= f.input :name, label: 'Your Name', required: true, input_html: { class: 'form-control mb-3' } %>
+              <%= f.input :email, label: 'Your Email', required: true, input_html: { class: 'form-control mb-3' } %>
+              <%= f.input :content, label: 'Your Message', as: :text, required: true, input_html: { rows: 6, class: 'form-control mb-3' } %>
+              <%= f.submit 'Send Message', class: 'btn btn-dark w-100 mt-3' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
 
-  <div id="contact">
-    <h2>Contact</h2>
-    <p>Feel free to reach out through the form below:</p>
-    <%= simple_form_for :message, url: contact_path do |f| %>
-      <%= f.input :name %>
-      <%= f.input :email %>
-      <%= f.input :content, as: :text %>
-      <%= f.button :submit, "Send" %>
-    <% end %>
-  </div>
+    <%= render 'shared/footer' %>
 </div>

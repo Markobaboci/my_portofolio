@@ -24,32 +24,43 @@
   }
 }
 
+#hero-picture {
+  margin-top: 20px; // Push the image downward
+  position: relative; // Ensure the image moves independently
+  width: auto; /* Set desired width */
+  height: auto;
+
+
+
+}
+
+#hero-picture img {
+  transform: translateY(20px); // Fine-tune downward movement
+}
+
+.hero-content {
+  margin-top: 20px; /* Move content up */
+}
+
 #hero {
-  background: url('background.jpg') no-repeat center top;
+  background: url('laptop-background.jpg') no-repeat center top;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .hero-content {
   text-align: center;
-  margin-top: -300px;
+  padding-top: 20px;
 }
 
-.profile-pic {
-  width: 200px;
-  height: 250px;
-  border-radius: 50%;
-  border: 3px solid white;
-  margin-bottom: 20px;
-}
-
-h1 {
+h2 {
   font-size: 2.5rem;
-  margin-top: 20px;
+  font-weight: bold;
+  color: white;
 }
 
 h3 {
@@ -74,17 +85,23 @@ h3 {
   color: white;
 }
 
+.divider {
+  width: 50px;
+  height: 4px;
+  background-color: white;
+}
+
 #about {
   h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color:#4F7B28;
+    color: white;
   }
 
   .divider {
     width: 50px;
     height: 4px;
-    background-color: #4F7B28;
+    background-color: white;
   }
 
   .row {
@@ -106,7 +123,7 @@ h3 {
 
   p {
     font-size: 1rem;
-    color: #6c757d;
+    color: white;
   }
 }
 .card-image {
@@ -114,4 +131,313 @@ h3 {
   height: 80px;
   object-fit: contain; /* Ensures the image doesn't get distorted */
   margin-bottom: 15px;
+}
+
+#about-projects{
+  background: url("stars-background.jpg") no-repeat center top;
+  background-size: 100% 100%;
+
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px); // Lifts the card slightly
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2); // Adds a shadow effect
+  }
+
+  img {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05); // Zooms the image slightly
+  }
+
+  .card-title {
+    transition: color 0.3s ease;
+  }
+
+  &:hover .card-title {
+    color: black; // Highlight the title on hover (replace `$primary` with your theme color)
+  }
+}
+
+#project-section {
+
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: cent
+  }
+
+
+  #contact {
+    background: url('windows-background.jpg') no-repeat center top;
+    background-size: 100% 100%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    #project-section,
+    #contactdiv {
+      position: relative; // Reset stacking context
+      z-index: 1; // Ensure correct stacking order
+    }
+
+    h2{
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+
+    #typewriter {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right:  solid black;
+      animation: blink-caret 0.5s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: white;
+      }
+    }
+
+    #typewriter {
+      margin: 0 auto;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .btn-custom {
+      display: inline-block;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      background: linear-gradient(90deg, gray, #ada9a9);
+      background-size: 200%;
+      transition: background-position 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-custom::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+      transform: scale(0.8);
+      transition: all 0.4s ease;
+      z-index: 1;
+    }
+
+    .btn-custom:hover {
+      background-position: 100%;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px (255, 118, 181, 0.6);
+    }
+
+    .btn-custom:hover::after {
+      left: -150%;
+      transform: scale(1);
+    }
+
+    .fade-effect {
+      position: relative;
+      z-index: 1;
+      mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 75%);
+      -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 75%);
+      mask-size: cover;
+      -webkit-mask-size: cover;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      width: 350px; // Set the desired size
+      height: 350px; // Set the desired size
+      display: block;
+    }
+
+    // #hero-picture {
+    //   position: relative;
+    //   background-color: #000; // Matches the background to blend the fade
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+    //   overflow: hidden;
+    // }
+
+    #navbar {
+      background: linear-gradient(45deg, rgb(71, 71, 71), black);
+      background-size: 400% 400%; /* Creates the effect of a moving gradient */
+      animation: gradientBG 5s ease infinite; /* Animation of the gradient */
+      min-height: 60px; /* Adjust height based on your navbar size */
+      transition: background-color 0.5s ease; /* Smooth transition for any color change */
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .rolling-titles {
+      width: 100%;
+      overflow: visible; /* Hide the text outside the container */
+      // background-color: #333; /* Background color for the container */
+      margin-top: auto;
+      margin-bottom: 70px;
+    }
+
+    .rolling-titles h2 {
+      display: inline-block;
+      white-space: nowrap; /* Prevent the text from wrapping */
+      padding-left: 100%; /* Start the text off-screen */
+      animation: scroll-left 25s linear infinite; /* Animation to move the text */
+      color: white; /* Text color */
+      font-size: 24px; /* Font size */
+    }
+
+    /* Animation to make the text scroll from right to left */
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(50%); /* Start at the right */
+      }
+      100% {
+        transform: translateX(-100%); /* End at the left */
+      }
+    }
+
+#contact-text{
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+      url('wind') no-repeat center top;
+    background-size: cover; /* Ensures the image covers the entire div */
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-image {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Match height to width for a perfect circle */
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensures the image fits well within the circle */
+  border: 2px solid #ccc; /* Optional: Adds a border around the circle */
+}
+
+#hero-picture img {
+  width: 350px; /* Adjust the size */
+  height: 400px; /* Ensure proportions */
+  // border: 5px solid white; /* Add a border */
+  border-radius: 50%; /* Make it circular */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5); /* Add shadow */
+  transition: transform 1s ease-in-out; /* Smooth hover effect */
+}
+
+#footer {
+  padding-top: 15px; /* Increase top padding */
+  padding-bottom: 15px; /* Increase bottom padding */
+}
+
+#footer .navbar-nav .nav-item {
+  padding: 0 15px; /* Optional: add horizontal padding to space out items */
+}
+
+#footer .navbar-nav .nav-link {
+  font-size: 18px; /* Adjust the font size if needed */
+}
+
+#footer .navbar-nav img {
+  width: 40px; /* Optionally increase the logo size */
+  height: auto;
+}
+
+#footer {
+  font-family: Arial, sans-serif;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffdd57; /* Same hover effect as the navbar */
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+
+  /* Additional footer-specific styles */
+  .text-white {
+    color: #fff;
+  }
+
+  &.bg-primary {
+    background-color: #000; /* Black background like your navbar */
+  }
+}
+
+#footer {
+  background: linear-gradient(45deg,white, gray);
+  background-size: 400% 400%; /* Creates the effect of a moving gradient */
+  animation: gradientBG 5s ease infinite; /* Animation of the gradient */
+  min-height: 60px; /* Adjust height based on your navbar size */
+  transition: background-color 0.5s ease; /* Smooth transition for any color change */
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
