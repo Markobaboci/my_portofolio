@@ -6,6 +6,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="preload" href="<%= asset_path('controllers/hello_controller.js') %>" as="script">
+    <link rel="preload" href="<%= asset_path('controllers/typewriter_controller.js') %>" as="script">
+
 
     <%= yield :head %>
 
