@@ -1,4 +1,4 @@
-import "@hotwired/turbo-rails";
+require("@hotwired/turbo-rails");
 import "bootstrap";
 import "controllers";
 import "@popperjs/core";
