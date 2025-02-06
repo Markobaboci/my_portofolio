@@ -1,8 +1,8 @@
 require("@hotwired/turbo-rails");
-import "bootstrap";
-import "controllers";
+require("bootstrap");
+require("controllers");
 require("@popperjs/core");
-import "particles.js";
+require("particles.js");
 require("controllers/typewriter_controller");
 
 document.addEventListener("turbo:load", () => {

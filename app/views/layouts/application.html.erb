@@ -8,8 +8,9 @@
     <%= csp_meta_tag %>
     <script src="<%= asset_path('controllers/hello_controller.js') %>" defer></script>
     <script src="<%= asset_path('controllers/typewriter_controller.js') %>" defer></script>
-
-
+    <script src="<%= asset_path('application.js') %>" defer></script>
+    <script src="<%= asset_path('controllers/application.js') %>" defer></script>
+    <script src="<%= asset_path('controllers/index.js') %>" defer></script>
     <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">
