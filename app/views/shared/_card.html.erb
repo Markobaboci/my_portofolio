@@ -1,7 +1,9 @@
-
-
-<div class="col-md-4 mb-4">
-  <%= image_tag image_path, alt: title, class: 'card-image mb-3' %>
-  <h3 class="font-weight-bold text-white"><%= title %></h3>
-  <h5 class="text-white"><%= description %></h5>
+<div class="col-md-6 col-lg-4">
+  <div class="about-card">
+    <%= image_tag image_path, class: "card-image" %>
+    <div class="card-body">
+      <h3><%= title %></h3>
+      <p><%= description %></p>
+    </div>
+  </div>
 </div>

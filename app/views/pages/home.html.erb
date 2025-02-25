@@ -1,30 +1,40 @@
-
-  <div id="main">
-
-    <div id="hero" class="d-flex flex-column align-items-center text-center text-white">
-
-      <div id="hero-picture">
-        <%= image_tag 'smile-blackandwhite.jpeg', alt: 'Marko Baboci Profile', class: 'rounded-circle profile-pic fade-effect' %>
-      </div>
-
-      <div class="hero-content">
-        <h2 class="mb-4">Marko Baboci</h2>
-        <div
-          data-controller="typewriter"
-          data-typewriter-texts-value='["Berlin based Full Stack Web Developer", "JavaScript | Python | Ruby on Rails Developer"]'>
+<div id="main">
+  <div id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="header-container px-3 px-md-5">
+      <div class="header-content d-flex flex-column flex-lg-row align-items-center gap-4">
+        <div class="profile-section col-6 col-sm-4 col-md-3">
+          <%= image_tag 'headshot-14.jpg', alt: 'Marko Baboci Profile', class: 'profile-pic img-fluid' %>
         </div>
 
-
-
-        <div><a href="#project-section" class="btn-custom mt-4">View My Work</a></div>
-
+        <div class="text-content d-flex flex-column align-items-center align-items-lg-start">
+          <h1 class="name display-4 display-md-3 display-lg-2">Marko Baboci</h1>
+          <div class="title fs-5 fs-md-4 fs-lg-3 mb-4"
+            data-controller="typewriter"
+            data-typewriter-texts-value='["Berlin based Full Stack Web Developer", "JavaScript | Python | Ruby on Rails Developer"]'>
+          </div>
+          <div class="social-links d-flex gap-4">
+            <a href="https://www.linkedin.com/in/markobaboci/" class="social-link d-flex align-items-center" target="_blank">
+              <%= image_tag 'linkedln.png', alt: 'LinkedIn', class: 'social-icon' %>
+              <span class="ms-2 text-white">LinkedIn</span>
+            </a>
+            <a href="https://github.com/Markobaboci" class="social-link d-flex align-items-center" target="_blank">
+              <%= image_tag 'github.png', alt: 'GitHub', class: 'social-icon' %>
+              <span class="ms-2 text-white">GitHub</span>
+            </a>
+          </div>
+        </div>
       </div>
 
-        <div class="rolling-titles">
-          <h2>JavaScript | Python | Ruby on Rails | Vue.JS | Django | React | SCSS/SASS | CSS | HTML | PostgreSQL | C | Tailwind CSS | Bootstrap | Git | GitHub | Heroku | Cloudinary | Figma | Canva</h2>
-        </div>
-
+      <div class="description-section mt-4 col-11 col-md-10 col-lg-8 mx-auto">
+        <p class="fs-6 fs-md-5 fs-lg-4 lh-base">
+          Full-stack developer merging technical expertise with diverse experience in social work, real estate, and sustainable finance to build meaningful solutions.
+        </p>
+      </div>
     </div>
+  </div>
+  <div class="diagonal-divider"></div>
+</div>
+
 
 
 
@@ -103,10 +113,9 @@
   </div>
   </div>
 
-    <div id=contact-text><h1>Contact</h1></div>
-
     <div id="contact" class="bg-light py-5">
       <div class="container">
+        <h1 class="text-center mb-4">Contact</h1>
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-6 p-4 shadow rounded bg-white">
             <%= simple_form_for :message, url: contact_path, method: :post do |f| %>
@@ -116,7 +125,6 @@
               <%= f.submit 'Send Message', class: 'btn btn-dark w-100 mt-3' %>
             <% end %>
           </div>
-        </div>
       </div>
     </div>
     </div>

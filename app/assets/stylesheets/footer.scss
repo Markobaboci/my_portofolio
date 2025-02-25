@@ -1,0 +1,61 @@
+
+// #footer {
+//   padding-top: 15px; /* Increase top padding */
+//   padding-bottom: 15px; /* Increase bottom padding */
+// }
+
+// #footer .navbar-nav .nav-item {
+//   padding: 0 15px; /* Optional: add horizontal padding to space out items */
+// }
+
+// #footer .navbar-nav .nav-link {
+//   font-size: 18px; /* Adjust the font size if needed */
+// }
+
+// #footer .navbar-nav img {
+//   width: 40px; /* Optionally increase the logo size */
+//   height: auto;
+// }
+
+// #footer {
+//   font-family: Arial, sans-serif;
+
+//   .navbar-brand {
+//     font-size: 1.5rem;
+//   }
+
+//   .nav-link {
+//     font-size: 1rem;
+//     margin: 0 10px;
+//     transition: color 0.3s ease;
+
+//     &:hover {
+//       color: #ffdd57; /* Same hover effect as the navbar */
+//     }
+//   }
+
+//   .navbar-toggler {
+//     border: none;
+
+//     .navbar-toggler-icon {
+//       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+//     }
+//   }
+
+//   /* Additional footer-specific styles */
+//   .text-white {
+//     color: #fff;
+//   }
+
+//   &.bg-primary {
+//     background-color: #000; /* Black background like your navbar */
+//   }
+// }
+
+// #footer {
+//   background: linear-gradient(45deg,white, gray);
+//   background-size: 400% 400%; /* Creates the effect of a moving gradient */
+//   animation: gradientBG 5s ease infinite; /* Animation of the gradient */
+//   min-height: 60px; /* Adjust height based on your navbar size */
+//   transition: background-color 0.5s ease; /* Smooth transition for any color change */
+// }

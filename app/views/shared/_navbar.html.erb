@@ -1,23 +1,26 @@
-<nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+<div class="navbar navbar-expand-sm navbar-lewagon">
+  <div class="gradient-animation"></div>
   <div class="container">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#hero">Home</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
+          <%= link_to "About", "#about", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
+          <%= link_to "Projects", "#projects", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
+          <%= link_to "Contact", "#contact", class: "nav-link" %>
         </li>
       </ul>
     </div>
   </div>
-</nav>
+</div>
